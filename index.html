@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Khitanan - Ahmad</title>
+    <style>
+        /* Gaya Dasar */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 500px;
+            background-color: #ffffff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        /* Bagian Header / Cover */
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+        }
+        .header h2 {
+            margin: 10px 0 0;
+            font-size: 32px;
+        }
+        
+        /* Bagian Konten */
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        .section h3 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        /* Tombol Maps */
+        .btn-maps {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .btn-maps:hover {
+            background-color: #45a049;
+        }
+        
+        /* Kotak Hadiah / Rekening */
+        .gift-box {
+            background-color: #f9f9f9;
+            border: 1px dashed #4CAF50;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        /* Form Buku Tamu */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        /* Daftar Ucapan */
+        .message-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .message-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        .message-item strong {
+            display: block;
+            color: #4CAF50;
+        }
+        .message-item span {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Tasyakuran Khitanan</h1>
+            <h2>Ahmad Maulana</h2>
+            <p>Putra dari Bapak Muliyadi & Ibu Herni</p>
+        </div>
+
+        <!-- Informasi Acara & Maps -->
+        <div class="section">
+            <h3>Waktu & Tempat Acara</h3>
+            <p>Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara tasyakuran khitanan putra kami yang akan diselenggarakan pada:</p>
+            <p>
+                <strong>Sabtu, 18 Juli 2026</strong><br>
+                Pukul 09.00 WIB s.d Selesai
+            </p>
+            <p>
+                <strong>Kediaman Ananda</strong><br>
+                Jl. Merdeka No. 123, Jakarta
+            </p>
+            <!-- Ganti href dengan link Google Maps yang sesuai -->
+            <a href="https://maps.google.com/?q=Monumen+Nasional+Jakarta" target="_blank" class="btn-maps">Buka di Google Maps</a>
+        </div>
+
+        <!-- Hadiah / Rekening -->
+        <div class="section">
+            <h3>Kirim Hadiah (Tanda Kasih)</h3>
+            <p>Bagi keluarga dan sahabat yang ingin memberikan tanda kasih untuk ananda, dapat melalui rekening berikut:</p>
+            <div class="gift-box">
+                <p><strong>BCA</strong><br>
+                No. Rekening: 1234567890<br>
+                a.n. Budi Santoso</p>
+                
+                <p><strong>Mandiri</strong><br>
+                No. Rekening: 0987654321<br>
+                a.n. Ani Yudhoyono</p>
+            </div>
+        </div>
+
+        <!-- Buku Tamu & Kehadiran -->
+        <div class="section">
+            <h3>Buku Tamu & Ucapan</h3>
+            
+            <form id="guestbookForm">
+                <div class="form-group">
+                    <label for="name">Nama Anda</label>
+                    <input type="text" id="name" required placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="attendance">Kehadiran</label>
+                    <select id="attendance">
+                        <option value="Hadir">Insya Allah Hadir</option>
+                        <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan / Doa</label>
+                    <textarea id="message" rows="4" required placeholder="Tulis doa untuk ananda..."></textarea>
+                </div>
+                <button type="submit">Kirim Ucapan</button>
+            </form>
+
+            <div class="message-list" id="messageList">
+                <!-- Daftar ucapan akan muncul di sini -->
+                <div class="message-item">
+                    <strong>Keluarga Andi <span>(Hadir)</span></strong>
+                    <p>Selamat dikhitan ya Ahmad, semoga menjadi anak yang sholeh dan berbakti kepada orang tua.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript untuk Buku Tamu Sederhana -->
+    <script>
+        document.getElementById('guestbookForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah reload halaman
+            
+            // Mengambil nilai dari form
+            const name = document.getElementById('name').value;
+            const attendance = document.getElementById('attendance').value;
+            const message = document.getElementById('message').value;
+            
+            // Membuat elemen HTML baru untuk ucapan
+            const newMessage = document.createElement('div');
+            newMessage.className = 'message-item';
+            newMessage.innerHTML = `
+                <strong>${name} <span>(${attendance})</span></strong>
+                <p>${message}</p>
+            `;
+            
+            // Menambahkan ucapan baru ke bagian atas daftar
+            const messageList = document.getElementById('messageList');
+            messageList.insertBefore(newMessage, messageList.firstChild);
+            
+            // Mereset form setelah dikirim
+            document.getElementById('guestbookForm').reset();
+            
+            alert('Terima kasih atas ucapan dan doa Anda!');
+        });
+    </script>
+
+</body>
+</html>
